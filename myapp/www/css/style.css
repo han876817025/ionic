@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+.box{
+  width: 100vw;
+  height:200px;
+}
+.box>img{
+  width: 100vw;
+  height:200px;
+}

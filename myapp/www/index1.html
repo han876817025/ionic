@@ -1,0 +1,116 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="starter" ng-controller="trol">
+<ion-side-menus>
+  <ion-side-menu-content>
+    <div class="bar bar-header">
+      <!--<button class="button button-icon icon ion-navicon"></button>-->
+
+      <img class="" src="img/ionic.png" menu-toggle=""
+           style="border-radius: 50%;margin: 5px;height: 30px;width: 30px;background: blue">
+
+      <div class="h1 title" menu-toggle="">动态</div>
+      <button class="button button-clear button-positive">更多</button>
+    </div>
+    <ion-content class="has-header">
+      <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="search" placeholder="大家都在搜" style="text-align: center">
+        </label>
+      </div>
+      <ion-refresher
+        pulling-text="刷新中..."
+        on-refresh="doRefresh()"
+      ></ion-refresher>
+      <div class="tabs-light tabs-top tabs-background-light  " style="border: none;">
+        <div class="tabs tabs-icon-top">
+          <a class="tab-item active" href="#">
+            <i class="icon ion-star" style="color: lightsalmon;" title="动态"></i>
+            动态
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-location" style="color: red;"></i>
+            附近的人
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-social-windows-outline" style="color: #0a9dc7"></i>
+            兴趣部落
+          </a>
+        </div>
+      </div>
+      <div class="list has-tabs-top">
+        <a class="item item-icon-left" href="#">
+          <i class="icon ion-email"></i>
+          动漫
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <a class="item item-icon-left item-icon-right" href="#">
+          <i class="icon ion-chatbubble-working"></i>
+          游戏
+          <i class="icon ion-chevron-right"></i>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <i class="icon ion-mic-a"></i>
+          日迹
+          <i class="icon ion-chevron-right"></i>
+        </a>
+
+        <a class="item item-icon-left" href="#">
+          <i class="icon ion-person-stalker"></i>
+         看点
+          <span class="icon ion-chevron-right"></span>
+        </a>
+
+      </div>
+    </ion-content>
+    <ion-tabs class="tabs-icon-top tabs-stable">
+      <ion-tab title="消息" icon="ion-ios-chatbubble-outline"></ion-tab>
+      <ion-tab title="联系人" icon="ion-person"></ion-tab>
+      <ion-tab title="动态" icon="ion-star"></ion-tab>
+    </ion-tabs>
+  </ion-side-menu-content>
+
+  <ion-side-menu>
+    <div class="bar bar-header">
+      <button class="button button-icon icon ion-navicon"></button>
+      <div class="h1 title">Header Buttons</div>
+      <button class="button button-clear button-positive">Edit</button>
+    </div>
+  </ion-side-menu>
+</ion-side-menus>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<ion-view view-title="首页">
+  <ion-nav-buttons><button class="button button-clear" menu-toggle="left"><i class="icon ion-navicon"></i></button></ion-nav-buttons>
+  <ion-nav-buttons side="right"><button class="button button-clear"><i class="icon ion-email"></i></button></ion-nav-buttons>
+  <ion-content>
+    <ion-slide-box does-continue="true" slide-interval=2000 auto-play="true">
+      <ion-slide>
+        <div class="box blue"><img src="../img/02.jpg" alt=""></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box yellow"><img src="../img/3.png" alt=""></div>
+      </ion-slide>
+      <ion-slide on-slide-changed="slideHasChanged(index)">
+        <div class="box pink"><img src="../img/5.png" alt=""></div>
+      </ion-slide>
+    </ion-slide-box>
+    <div class="row">
+      <div class="col"><a class="tab-item">
+        <i class="icon ion-star" style="color: #c20053;"></i>
+        动漫
+      </a></div>
+      <div class="col"><a class="tab-item">
+        <i class="icon ion-map " style="color: #00b3ee;"></i>
+        电影
+      </a></div>
+      <div class="col"><a class="tab-item">
+        <i class="icon ion-umbrella" style="color: #00CCFF;"></i>
+        好吃
+      </a></div>
+      <div class="col"><a class="tab-item">
+        <i class="icon  ion-easel" style="color: #00CCFF;"></i>
+        好玩
+      </a></div>
+    </div>
+    <div class="row">
+      <div class="col"><a class="tab-item">
+        <i class="icon ion-clock" style="color: #c20053;"></i>
+        动漫
+      </a></div>
+      <div class="col"><a class="tab-item">
+        <i class="icon ion-beer" style="color: #00b3ee;"></i>
+        电影
+      </a></div>
+      <div class="col"><a class="tab-item">
+        <i class="icon ion-image" style="color: #00CCFF;"></i>
+        好吃
+      </a></div>
+      <div class="col"><a class="tab-item">
+        <i class="icon  ion-speakerphone" style="color: #00CCFF;"></i>
+        好玩
+      </a></div>
+    </div>
+    <div style="width: 100vw;text-align: center;font-size: 12px">好看的</div>
+    <div>
+    <div ng-repeat="(i,a) in arr" >
+      <a href="#/list/detal/{{i}}"><img src={{a}} style="width: 100vw;" ng-click="fn()"></a>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>
